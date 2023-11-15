@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <title>Bootstrap Form Example</title>
+  <style>
+    .result-container {
+    display: inline-block;
+    position: relative;
+    }
+
+    .result-image {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        display: block;
+    }
+
+    .badge {
+        font-size: 10px;
+    }
+
+    @keyframes border-animation {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(100%, 0);
+        }
+        50% {
+            transform: translate(100%, 100%);
+        }
+        75% {
+            transform: translate(0, 100%);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    .anomaly-score {
+        font-size: 14px;
+        animation: score-animation 2s infinite alternate; /* Add score animation */
+    }
+
+    @keyframes score-animation {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.1);
+        }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Anomaly Detection</h2>
+  <div class="row">
+    <div class="col-md-12">
+        {% if user_input %}
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for key, value in user_input.items() %}
+                        <tr>
+                            <td>{{ getKeyValue(key) }}</td>
+                            <td>{{ value }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p class="text-center" style="border: 2px solid black;margin: auto;display: block;width: 25%;margin-bottom: 1%;border-radius: 8px;">Expected Maintenance Date: {{ expected_date }}</p>
+        {% endif %}
+    </div>
+</div>
+  <div class="row">
+    <div class="col-md-12">
+        {% if anomaly_label == 1 %}
+            <div class="normal">
+                <img src="/static/images/happy.png" alt="Normal" class="result-image anomaly-score"><br/>
+                <p class="text-center anomaly-score" style="font-size:10px;"><span class="badge bg-success">Normal</span></p>
+            </div>
+        {% elif anomaly_label == -1 %} 
+            <div class="outlier">
+                <img src="/static/images/sad.png" alt="Outlier" class="result-image anomaly-score"><br/>
+                <p class="text-center anomaly-score" style="font-size:10px;"><span class="badge bg-danger">Outlier</span></p>
+            </div>
+        {% endif %}
+        {% if assessment|length %}
+            <p class="text-center anomaly-score">Maintenance Assessment: {{ assessment }}</p>
+        {% endif %}
+        <p></p>
+        {% if anomaly_score %}
+            <p class="text-center anomaly-score">Anomaly Score: {{anomaly_score}}</p>
+        {% endif %}
+
+    </div>
+  </div>
+  <form style="margin:auto;display:block;width:50%;border: 5px solid;border-image: linear-gradient(to right, #4CAF50, #2196F3);border-image-slice: 1;padding: 15px;" action="{{ url_for('index') }}" method="post">
+    <div class="mb-3">
+      <label for="name" class="form-label">Battery Voltage (Lead-acid) (V)</label>
+      <input type="text" class="form-control" name="battery" pattern="^\d{2}\.\d{2}$" title="Please enter a valid decimal number with up to two digits after the decimal point" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Motor Temperature</label>
+      <input type="text" class="form-control" name="temp" pattern="^\d{2}\.\d{2}$" title="Please enter a valid decimal number with up to two digits after the decimal point" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Motor RPM</label>
+      <input type="text" class="form-control" name="rpm" pattern="^\d{4}$" title="Please enter a valid 4-digit number" required>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Range (km)</label>
+        <input type="text" class="form-control" name="range" pattern="^\d{3}$" title="Please enter a valid 3-digit number" required>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Tyre Pressure (psi)</label>
+        <input type="text" class="form-control" name="pressure" pattern="^\d{2}\.\d{2}$" title="Please enter a valid decimal number with up to two digits after the decimal point" required>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Brake Fluid (%)</label>
+        <input type="text" class="form-control" name="fluid" pattern="^\d{2}$" title="Please enter a valid 2-digit number" requirred>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Coolant Level (%)</label>
+        <input type="text" class="form-control" name="coolant" pattern="^\d{2}$" title="Please enter a valid 2-digit number" required>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Lubricant Level (%)</label>
+        <input type="text" class="form-control" name="lubricant" pattern="^\d{2}$" title="Please enter a valid 2-digit number" required>
+    </div>
+    <button type="submit" class="btn" style="background:linear-gradient(to right, #4CAF50, #2196F3) !important;margin:auto;display:block;color:white">Submit</button>
+  </form><br/>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

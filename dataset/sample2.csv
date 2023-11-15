@@ -1,0 +1,66 @@
+Battery_Voltage_(Lead-acid)_(V),Motor_Temperature,Motor_RPM,Range_(km),Tyre_Pressure_(psi),Brake_Fluid_(%),Coolant_Level_(%),Lubricant_Level_(%),Maintenance_Needed_(Area)
+12.4,78,3200,280,33,75,65,85,No Maintenance Required
+12.2,82,3000,250,31,70,70,80,Tyres
+12.8,75,2800,300,35,80,60,90,No Maintenance Required
+12.5,80,3100,270,34,72,68,78,No Maintenance Required
+12.3,85,3300,260,32,78,72,82,Motor and Lubrication
+12.7,77,2900,290,36,68,64,88,No Maintenance Required
+12.6,79,3200,240,30,74,66,86,Battery
+12.1,83,2800,310,37,77,63,92,Tyres and Lubrication
+12.9,76,3000,280,32,71,69,79,No Maintenance Required
+12.4,81,3100,260,33,76,67,81,No Maintenance Required
+12.2,79,2900,270,35,73,71,83,No Maintenance Required
+12.8,74,3000,280,34,79,65,89,Tyres and Brake System
+12.6,82,3300,250,31,70,68,87,Motor and Tyres
+12.3,77,2800,290,36,68,64,85,No Maintenance Required
+12.5,80,3200,240,30,75,66,90,Battery
+12.2,85,3100,270,32,78,72,78,No Maintenance Required
+12.7,76,3000,280,33,72,69,84,No Maintenance Required
+12.4,78,2900,260,34,74,67,80,No Maintenance Required
+12.3,81,2800,300,35,80,60,91,No Maintenance Required
+12.8,75,3300,250,31,71,68,82,No Maintenance Required
+12.6,79,3200,290,36,77,63,88,Motor and Brake System
+12.2,83,3000,270,32,73,71,79,Tyres and Lubrication
+12.5,77,3100,260,33,79,65,86,No Maintenance Required
+12.1,84,2900,280,34,68,66,83,Tyres and Motor
+12.9,76,3000,240,30,74,69,87,No Maintenance Required
+12.4,80,3300,270,32,75,67,80,No Maintenance Required
+12.2,78,2800,300,35,72,68,89,No Maintenance Required
+12.8,75,3100,260,33,76,64,82,Motor and Brake System
+12.6,82,2900,290,36,77,70,91,Tyres and Lubrication
+12.3,77,3000,250,31,70,66,84,No Maintenance Required
+12.5,79,3200,280,34,78,63,85,No Maintenance Required
+12.2,83,3100,270,32,71,68,79,No Maintenance Required
+12.8,76,3000,280,33,79,66,82,No Maintenance Required
+12.6,80,2900,260,34,75,68,88,No Maintenance Required
+12.3,77,2800,290,36,68,64,87,No Maintenance Required
+12.5,81,3300,250,31,70,71,85,Motor and Tyres
+12.2,79,3200,290,36,77,63,88,Brake System and Lubrication
+12.8,83,3000,270,32,73,71,79,Tyres and Brake System
+12.4,78,2900,260,34,74,67,80,No Maintenance Required
+12.3,81,2800,300,35,80,60,91,No Maintenance Required
+12.8,75,3300,250,31,71,68,82,No Maintenance Required
+12.6,79,3200,290,36,77,63,88,Tyres and Brake System
+12.2,83,3000,270,32,73,71,79,No Maintenance Required
+12.5,77,3100,260,33,79,65,86,No Maintenance Required
+12.1,84,2900,280,34,68,66,83,No Maintenance Required
+12.9,76,3000,240,30,74,69,87,Motor and Brake System
+12.4,80,3300,270,32,75,67,80,No Maintenance Required
+12.2,78,2800,300,35,72,68,89,No Maintenance Required
+12.8,75,3100,260,33,76,64,82,Tyres
+12.6,82,2900,290,36,77,70,91,Brake System and Lubrication
+12.3,77,3000,250,31,70,66,84,No Maintenance Required
+12.5,79,3200,280,34,78,63,85,Motor and Brake System
+12.2,83,3100,270,32,71,68,79,No Maintenance Required
+12.8,76,3000,280,33,79,66,82,No Maintenance Required
+12.6,80,2900,260,34,75,68,88,No Maintenance Required
+12.3,77,2800,290,36,68,64,87,Motor and Tyres
+12.5,81,3300,250,31,70,71,85,No Maintenance Required
+12.2,79,3200,290,36,77,63,88,Tyres and Lubrication
+12.8,83,3000,270,32,73,71,79,No Maintenance Required
+12.4,78,2900,260,34,74,67,80,No Maintenance Required
+12.3,81,2800,300,35,80,60,91,Tyres
+12.8,75,3300,250,31,71,68,82,No Maintenance Required
+12.6,79,3200,290,36,77,63,88,No Maintenance Required
+12.2,83,3000,270,32,73,71,79,Tyres and Lubrication
+12.5,77,3100,260,33,79,65,86,No Maintenance Required
